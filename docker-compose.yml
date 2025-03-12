@@ -1,0 +1,31 @@
+services: 
+  node-server:
+    container_name: node_express_authenication
+    build: .
+    ports:
+    - "8000:8000"
+  db: 
+    image: mysql:latest
+    container_name: db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: Authenication 
+    ports: 
+      - "3306:3306"
+    volumes:
+      - mysql_data_test:/var/lib/mysql
+  PHPMYADMIN:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: PHPMYADMIN
+    environment:
+      PMA_HOST: db
+      PMA_POST : 3306 
+      PMA_USER : root 
+      PMA_PASSWORD: root 
+    ports:
+      - "8080:80"
+    depends_on: 
+      - db
+volumes: 
+  mysql_data_test: 
+    driver: local
