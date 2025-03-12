@@ -27,7 +27,6 @@ app.get('/testget',async(req,res) => {
     let [result] = await conn.query("select * from testname where id = 1");
     res.json(result);
 })
-<<<<<<< HEAD
 app.get('/testdocker',(req,res) => {
   res.json("OK");
 })
@@ -39,9 +38,6 @@ app.get('/testddd',(req,res) => {
   res.json('testtest');
 })
 
-=======
-app.get('new');
->>>>>>> 3006b9ef8e37ac908fb030f8c149cbfe21234ec7
 app.listen(port, async() => {
   await initMySQL();
   console.log(`Server running at http://localhost:${port}/`)
