@@ -39,6 +39,7 @@ app.get('/testddd',(req,res) => {
 })
 
 app.get('/tortestgit',(req,res));
+app.get('/tortestmerge',(req,res));
 
 app.listen(port, async() => {
   await initMySQL();
