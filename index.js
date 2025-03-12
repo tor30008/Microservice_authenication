@@ -38,6 +38,8 @@ app.get('/testddd',(req,res) => {
   res.json('testtest');
 })
 
+app.get('/tortestgit',(req,res));
+
 app.listen(port, async() => {
   await initMySQL();
   console.log(`Server running at http://localhost:${port}/`)
