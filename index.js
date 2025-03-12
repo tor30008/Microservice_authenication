@@ -27,6 +27,7 @@ app.get('/testget',async(req,res) => {
     let [result] = await conn.query("select * from testname where id = 1");
     res.json(result);
 })
+app.get('new');
 app.listen(port, async() => {
   await initMySQL();
   console.log(`Server running at http://localhost:${port}/`)
