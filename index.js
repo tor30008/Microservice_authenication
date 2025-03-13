@@ -62,6 +62,9 @@ app.get('/tlv', (req,res) => {
   res.json('tor new version');
 });
 
+app.get('/torbrachupdate',(req,res)=> {
+  res.json('torbrach');
+})
 
 app.listen(port, async() => {
   await initMySQL();
