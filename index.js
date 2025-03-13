@@ -54,6 +54,7 @@ app.get('/tortest',(req,res) => {
   res.json('docker hot reload');
 })
 
+app.get('/torloweversion');
 
 
 app.listen(port, async() => {
