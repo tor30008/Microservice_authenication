@@ -46,21 +46,6 @@ app.get('/test',(req,res) => {
   console.log('test ja');
 })
 
-app.get('/armtest',(req,res) => {
-  res.json("arm Test")
-})
-
-app.get('/tortest',(req,res) => {
-  res.json('docker hot reload');
-})
-
-app.get('/test001',(req,res) => {
-  res.json('This is test 001 man');
-})
-
-app.get('/tlv', (req,res) => {
-  res.json('tor new version');
-});
 
 
 app.listen(port, async() => {
