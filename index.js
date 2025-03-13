@@ -43,7 +43,7 @@ app.get('/testdoc',(req,res) => {
 })
 
 app.get('/test',(req,res) => {
-  console.log('test ja');
+  console.log('test');
 })
 
 app.get('/armtest',(req,res) => {
