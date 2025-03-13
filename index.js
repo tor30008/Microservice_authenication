@@ -54,10 +54,14 @@ app.get('/tortest',(req,res) => {
   res.json('docker hot reload');
 })
 
+<<<<<<< HEAD
 app.get('/test001',(req,res) => {
   res.json('This is test 001 man');
 })
 
+=======
+app.get('/torloweversion');
+>>>>>>> tor
 
 
 app.listen(port, async() => {
