@@ -43,7 +43,7 @@ app.get('/testdoc',(req,res) => {
 })
 
 app.get('/test',(req,res) => {
-  console.log('test ja');
+  console.log('test');
 })
 
 app.get('/armtest',(req,res) => {
@@ -65,6 +65,10 @@ app.get('/tlv', (req,res) => {
 app.get('/torbrachupdate',(req,res)=> {
   res.json('torbrach');
 })
+app.get('/armtest22',(req,res) => {
+  res.json("arm Test222")
+})
+
 
 app.listen(port, async() => {
   await initMySQL();
