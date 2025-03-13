@@ -62,6 +62,10 @@ app.get('/tlv', (req,res) => {
   res.json('tor new version');
 });
 
+app.get('/armtest22',(req,res) => {
+  res.json("arm Test222")
+})
+
 
 app.listen(port, async() => {
   await initMySQL();
