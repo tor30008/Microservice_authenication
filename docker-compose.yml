@@ -6,7 +6,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: Authenication 
     ports: 
-      - "3306:3306"
+      - "3307:3307"
     volumes:
       - mysql_data_test:/var/lib/mysql
   PHPMYADMIN:
@@ -14,7 +14,7 @@ services:
     container_name: PHPMYADMIN
     environment:
       PMA_HOST: db
-      PMA_POST : 3306 
+      PMA_POST : 3307
       PMA_USER : root 
       PMA_PASSWORD: root 
     ports:
