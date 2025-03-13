@@ -58,7 +58,9 @@ app.get('/test001',(req,res) => {
   res.json('This is test 001 man');
 })
 
-app.get('/torloweversion');
+app.get('/tlv', (req,res) => {
+  res.json('tor new version');
+});
 
 
 app.listen(port, async() => {
