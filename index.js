@@ -38,9 +38,37 @@ app.get('/testddd',(req,res) => {
   res.json('testtest');
 })
 
-app.get('/tortestgit',(req,res));
-app.get('/tortestmerge',(req,res));
-app.get('/torapigateway',(req,res));
+app.get('/testdoc',(req,res) => {
+  console.log('testdoc');
+})
+
+app.get('/test',(req,res) => {
+  console.log('test');
+})
+
+app.get('/armtest',(req,res) => {
+  res.json("arm Test")
+})
+
+app.get('/tortest',(req,res) => {
+  res.json('docker hot reload');
+})
+
+app.get('/test001',(req,res) => {
+  res.json('This is test 001 man');
+})
+
+app.get('/tlv', (req,res) => {
+  res.json('tor new version');
+});
+
+app.get('/torbrachupdate',(req,res)=> {
+  res.json('torbrach');
+})
+app.get('/armtest22',(req,res) => {
+  res.json("arm Test222")
+})
+
 
 
 app.listen(port, async() => {
