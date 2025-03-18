@@ -1,4 +1,5 @@
 import express , { Request , Response } from 'express';
+import {checkDB} from './Config/db.config';
 import * as path from 'path';
 import https from 'https';
 import fs from 'fs';
@@ -16,5 +17,6 @@ app.get('/test',(req:Request,res:Response) => {
 });
 
 app.listen(port ,async() => {
+    checkDB();
     console.log("Start Backend API");
 })
