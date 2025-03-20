@@ -12,8 +12,6 @@ COPY ./ ./
 
 RUN chmod 755 ./startup.sh
 
-ENTRYPOINT [ "./startup.sh" ]
-
 EXPOSE 8000
 
 CMD ["./startup.sh","npm", "run", "dev"]
