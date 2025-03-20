@@ -12,6 +12,4 @@ RUN chmod +x ./startup.sh
 
 EXPOSE 8000
 
-ENTRYPOINT [ "./startup.sh" ]
-
-CMD ["npm" , "run", "dev"]
+CMD ["npm", "run", "dev"]
