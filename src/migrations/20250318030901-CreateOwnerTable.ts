@@ -50,6 +50,10 @@ export async function up (queryInterface: QueryInterface, Sequelize: typeof impo
       type:DataTypes.STRING,
       allowNull:false
     },
+    salt:{
+      type:DataTypes.INTEGER,
+      allowNull:false
+    },
     createdAt:{
       type:DataTypes.DATE,
       allowNull:false,
