@@ -2,14 +2,18 @@ FROM node:18
 
 WORKDIR /usr/src/app
 
-COPY ./ ./
+COPY package.json package-lock.json ./
+
+RUN mkdir -p /usr/src/app/node_modules && chmod -R 777 /usr/src/app/node_modules
 
 RUN npm install 
 
-COPY startup.sh ./startup.sh
+COPY ./ ./
 
-RUN chmod +x ./startup.sh
+RUN chmod 755 ./startup.sh
+
+ENTRYPOINT [ "./startup.sh" ]
 
 EXPOSE 8000
 
-CMD ["npm", "run", "dev"]
+CMD ["./startup.sh","npm", "run", "dev"]
